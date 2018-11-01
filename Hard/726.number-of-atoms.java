@@ -119,9 +119,14 @@ class Solution {
     private int getCount(char[] f) {
         int count = 0;
         while (i < f.length && '0' <= f[i] && f[i] <= '9') {
-            count = count * 10 + (f[i] - '0');
+            count = count * 10 + (f[i] - '0');  // Mg12 -> count = 1*10 + 2
             ++i;
         }
         return count == 0 ? 1 : count;
+    }
+
+    public static void main(String[] args){
+        String formula = "K4(ON(SO3)2)2";
+        System.out.println(formula);
     }
 }
